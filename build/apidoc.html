@@ -1,0 +1,615 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >nvmw (v0.2.1)</a>
+</h1>
+<h4>Node version manager for Windows</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nvmw">module nvmw</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nvmw.</span>common</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">nvmw.</span>ls</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nvmw.common">module nvmw.common</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nvmw.common.createEnvironmentTmp">
+            function <span class="apidocSignatureSpan">nvmw.common.</span>createEnvironmentTmp
+            <span class="apidocSignatureSpan">(filePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nvmw.common.getBaseDir">
+            function <span class="apidocSignatureSpan">nvmw.common.</span>getBaseDir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nvmw.common.getHomeDir">
+            function <span class="apidocSignatureSpan">nvmw.common.</span>getHomeDir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nvmw.common.getNodeDir">
+            function <span class="apidocSignatureSpan">nvmw.common.</span>getNodeDir
+            <span class="apidocSignatureSpan">(version)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nvmw.common.getNvmCacheDir">
+            function <span class="apidocSignatureSpan">nvmw.common.</span>getNvmCacheDir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nvmw.common.getNvmDir">
+            function <span class="apidocSignatureSpan">nvmw.common.</span>getNvmDir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nvmw.common.replacePathEnvironment">
+            function <span class="apidocSignatureSpan">nvmw.common.</span>replacePathEnvironment
+            <span class="apidocSignatureSpan">(version)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nvmw.common.replaceVersion">
+            function <span class="apidocSignatureSpan">nvmw.common.</span>replaceVersion
+            <span class="apidocSignatureSpan">(version)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.nvmw.ls">module nvmw.ls</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nvmw.ls.local">
+            function <span class="apidocSignatureSpan">nvmw.ls.</span>local
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nvmw.ls.remote">
+            function <span class="apidocSignatureSpan">nvmw.ls.</span>remote
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.nvmw.ls.sort">
+            function <span class="apidocSignatureSpan">nvmw.ls.</span>sort
+            <span class="apidocSignatureSpan">(versions)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nvmw" id="apidoc.module.nvmw">module nvmw</a></h1>
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nvmw.common" id="apidoc.module.nvmw.common">module nvmw.common</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nvmw.common.createEnvironmentTmp" id="apidoc.element.nvmw.common.createEnvironmentTmp">
+        function <span class="apidocSignatureSpan">nvmw.common.</span>createEnvironmentTmp
+        <span class="apidocSignatureSpan">(filePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createEnvironmentTmp = function (filePath) {
+    filePath = (filePath || path.join(os.tmpdir(), &#x27;nvmw_env.bat&#x27;));
+    fs.writeFileSync(
+        filePath,
+        &#x27;@echo off \nset &#x22;NVMW=&#x27; + (process.env.NVMW ? process.env.NVMW : &#x27;&#x27;) +
+        &#x27;&#x22;\nset &#x22;NVMW_DEFAULT=&#x27; + (process.env.NVMW_DEFAULT ? process.env.NVMW_DEFAULT : &#x27;&#x27;) +
+        &#x27;&#x22;\nset &#x22;PATH=&#x27; + process.env.PATH + &#x27;&#x22;&#x27;
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    common.replacePathEnvironment();
+
+    if (process.env.NVMW_DEFAULT) {
+        process.env.NVMW = process.env.NVMW_DEFAULT;
+        process.env.PATH = common.getNodeDir(process.env.NVMW_DEFAULT) + &#x22;;&#x22; + process.env.PATH;
+    }
+
+    common.<span class="apidocCodeKeywordSpan">createEnvironmentTmp</span>();
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nvmw.common.getBaseDir" id="apidoc.element.nvmw.common.getBaseDir">
+        function <span class="apidocSignatureSpan">nvmw.common.</span>getBaseDir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBaseDir = function () {
+    return path.join(this.getHomeDir(), &#x27;nvmw&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+
+getBaseDir: function() {
+    return path.join(this.getHomeDir(), &#x27;nvmw&#x27;);
+},
+
+getNvmCacheDir: function() {
+    return path.join(this.<span class="apidocCodeKeywordSpan">getBaseDir</span>(), &#x27;cache&#x27;);
+},
+
+getNvmDir: function() {
+    return path.join(this.getBaseDir(), &#x27;nodejs&#x27;);
+},
+
+getNodeDir: function(version) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nvmw.common.getHomeDir" id="apidoc.element.nvmw.common.getHomeDir">
+        function <span class="apidocSignatureSpan">nvmw.common.</span>getHomeDir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHomeDir = function () {
+    return path.join(process.env.HOMEDRIVE,  process.env.HOMEPATH);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+
+getHomeDir: function() {
+    return path.join(process.env.HOMEDRIVE,  process.env.HOMEPATH);
+},
+
+getBaseDir: function() {
+    return path.join(this.<span class="apidocCodeKeywordSpan">getHomeDir</span>(), &#x27;nvmw&#x27;);
+},
+
+getNvmCacheDir: function() {
+    return path.join(this.getBaseDir(), &#x27;cache&#x27;);
+},
+
+getNvmDir: function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nvmw.common.getNodeDir" id="apidoc.element.nvmw.common.getNodeDir">
+        function <span class="apidocSignatureSpan">nvmw.common.</span>getNodeDir
+        <span class="apidocSignatureSpan">(version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNodeDir = function (version) {
+    return path.join(this.getNvmDir(), this.replaceVersion(version));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var common = require(&#x27;./common&#x27;);
+
+module.exports = function() {
+    common.replacePathEnvironment();
+
+    if (process.env.NVMW_DEFAULT) {
+        process.env.NVMW = process.env.NVMW_DEFAULT;
+        process.env.PATH = common.<span class="apidocCodeKeywordSpan">getNodeDir</span>(process.env.NVMW_DEFAULT) + &#x22;;&#x22
+; + process.env.PATH;
+    }
+
+    common.createEnvironmentTmp();
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nvmw.common.getNvmCacheDir" id="apidoc.element.nvmw.common.getNvmCacheDir">
+        function <span class="apidocSignatureSpan">nvmw.common.</span>getNvmCacheDir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNvmCacheDir = function () {
+    return path.join(this.getBaseDir(), &#x27;cache&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+var rmdir = require(&#x27;rmdir&#x27;),
+    common = require(&#x27;./common&#x27;);
+
+module.exports = function() {
+    rmdir(common.<span class="apidocCodeKeywordSpan">getNvmCacheDir</span>(), function(err, dirs, files) {
+        console.log(
+            &#x27;stale local caches removed %s&#x27;, (err ? &#x27;failed&#x27; : &#x27;successfully&#x27;)
+        );
+    });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nvmw.common.getNvmDir" id="apidoc.element.nvmw.common.getNvmDir">
+        function <span class="apidocSignatureSpan">nvmw.common.</span>getNvmDir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNvmDir = function () {
+    return path.join(this.getBaseDir(), &#x27;nodejs&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+
+getNvmDir: function() {
+    return path.join(this.getBaseDir(), &#x27;nodejs&#x27;);
+},
+
+getNodeDir: function(version) {
+    return path.join(this.<span class="apidocCodeKeywordSpan">getNvmDir</span>(), this.replaceVersion(version));
+},
+
+replacePathEnvironment: function(version) {
+    var nvmDir = this.getNvmDir();
+    function replace(nvmDir, version) {
+        var reg;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nvmw.common.replacePathEnvironment" id="apidoc.element.nvmw.common.replacePathEnvironment">
+        function <span class="apidocSignatureSpan">nvmw.common.</span>replacePathEnvironment
+        <span class="apidocSignatureSpan">(version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">replacePathEnvironment = function (version) {
+    var nvmDir = this.getNvmDir();
+    function replace(nvmDir, version) {
+        var reg;
+
+        if (version) {
+            reg = new RegExp(path.join(nvmDir, version).replace(/\\/g, &#x27;\\\\&#x27;) + &#x27;;&#x27;, &#x27;gi&#x27;);
+            process.env.PATH = process.env.PATH.replace(reg, &#x27;&#x27;);
+        }
+    }
+
+    replace(nvmDir, process.env.NVMW);
+    replace(nvmDir, process.env.NVMW_DEFAULT);
+    if (version) {
+        replace(nvmDir, version);
+    }
+
+    return process.env.PATH
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+var common = require(&#x27;./common&#x27;);
+
+module.exports = function() {
+common.<span class="apidocCodeKeywordSpan">replacePathEnvironment</span>();
+
+if (process.env.NVMW_DEFAULT) {
+    process.env.NVMW = process.env.NVMW_DEFAULT;
+    process.env.PATH = common.getNodeDir(process.env.NVMW_DEFAULT) + &#x22;;&#x22; + process.env.PATH;
+}
+
+common.createEnvironmentTmp();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nvmw.common.replaceVersion" id="apidoc.element.nvmw.common.replaceVersion">
+        function <span class="apidocSignatureSpan">nvmw.common.</span>replaceVersion
+        <span class="apidocSignatureSpan">(version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">replaceVersion = function (version) {
+    return (/^v/i.test(version) ? version.toLowerCase() : &#x27;v&#x27; + version);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+},
+
+getNvmDir: function() {
+    return path.join(this.getBaseDir(), &#x27;nodejs&#x27;);
+},
+
+getNodeDir: function(version) {
+    return path.join(this.getNvmDir(), this.<span class="apidocCodeKeywordSpan">replaceVersion</span>(version));
+},
+
+replacePathEnvironment: function(version) {
+    var nvmDir = this.getNvmDir();
+    function replace(nvmDir, version) {
+        var reg;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.nvmw.ls" id="apidoc.module.nvmw.ls">module nvmw.ls</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.nvmw.ls.local" id="apidoc.element.nvmw.ls.local">
+        function <span class="apidocSignatureSpan">nvmw.ls.</span>local
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">local = function () {
+    var nvmDir = common.getNvmDir(),
+        systemVersion = &#x27;system version (&#x27; + process.version + &#x27;)&#x27;,
+        versions = [];
+
+    if (fs.existsSync(nvmDir) &#x26;&#x26; fs.lstatSync(nvmDir).isDirectory()) {
+        versions = this.sort(fs.readdirSync(nvmDir));
+    }
+
+    if (_.isUndefined(process.env.NVMW)) {
+        console.log(&#x27;* %s&#x27;, systemVersion.green);
+    } else {
+        console.log(systemVersion);
+    }
+    _.each(versions, function(version) {
+        if (process.env.NVMW === version) {
+            console.log(&#x27;* %s&#x27;, version.green);
+        } else {
+            console.log(version);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.action(function(version) {
+    require(&#x27;../lib/switch_deactivate&#x27;)();
+});
+program
+.command(&#x27;ls&#x27;)
+.description(&#x27;list the installed all Nodes&#x27;)
+.action(function() {
+    require(&#x27;../lib/ls&#x27;).<span class="apidocCodeKeywordSpan">local</span>();
+});
+program
+.command(&#x27;ls-remote&#x27;)
+.description(&#x27;list remote versions available for install&#x27;)
+.action(function() {
+    require(&#x27;../lib/ls&#x27;).remote();
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nvmw.ls.remote" id="apidoc.element.nvmw.ls.remote">
+        function <span class="apidocSignatureSpan">nvmw.ls.</span>remote
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remote = function () {
+    var that = this;
+
+    request.get(&#x27;http://nodejs.org/dist/&#x27;, function(error, response, body) {
+        var versions = [];
+        if (error === null &#x26;&#x26; response.statusCode === 200) {
+            versions = that.sort(
+                _.uniq(
+                    _.filter(
+                        body.match(/v[0-9]+.[0-9]+.[0-9]+/gi),
+                        function(version) {
+                            return (/^(v0.[0-4].[0-9]+)|(v0.5.0)$/i.test(version) === false);
+                        }
+                    )
+                )
+            );
+        }
+        _.each(versions, function(version) {
+            console.log(version);
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.action(function() {
+    require(&#x27;../lib/ls&#x27;).local();
+});
+program
+.command(&#x27;ls-remote&#x27;)
+.description(&#x27;list remote versions available for install&#x27;)
+.action(function() {
+    require(&#x27;../lib/ls&#x27;).<span class="apidocCodeKeywordSpan">remote</span>();
+});
+program
+.command(&#x27;cleanup&#x27;)
+.description(&#x27;remove stale local caches&#x27;)
+.action(function() {
+    require(&#x27;../lib/cleanup&#x27;)();
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.nvmw.ls.sort" id="apidoc.element.nvmw.ls.sort">
+        function <span class="apidocSignatureSpan">nvmw.ls.</span>sort
+        <span class="apidocSignatureSpan">(versions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sort = function (versions) {
+    function sort(left, right, index) {
+        if (Number(left[index]) === Number(right[index])) {
+            return (index === 2 ? 0 : sort(left, right, index + 1));
+        }
+        return (Number(left[index]) &#x3e; Number(right[index]) ? 1 : -1);
+    }
+
+    if (_.size(versions) &#x3c;= 0 || _.isArray(versions) === false) {
+        return versions;
+    }
+
+    return versions.sort(function(left, right) {
+        return sort(
+            left.substr(1).split(&#x27;.&#x27;),
+            right.substr(1).split(&#x27;.&#x27;),
+            0
+        );
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        return (Number(left[index]) &#x3e; Number(right[index]) ? 1 : -1);
+    }
+
+    if (_.size(versions) &#x3c;= 0 || _.isArray(versions) === false) {
+        return versions;
+    }
+
+    return versions.<span class="apidocCodeKeywordSpan">sort</span>(function(left, right) {
+        return sort(
+            left.substr(1).split(&#x27;.&#x27;),
+            right.substr(1).split(&#x27;.&#x27;),
+            0
+        );
+    });
+},
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
